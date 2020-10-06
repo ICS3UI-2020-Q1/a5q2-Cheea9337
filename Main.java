@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
  *
- * @author 
+ * @author Aidan Cheesmond
  */
 public class Main {
 
@@ -9,7 +10,21 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // create a scanner for user input
+    Scanner input = new Scanner(System.in);
+
+    int userNum;
+
+    do{
+    // ask the user for a positive integer
+    System.out.println("Please enter a positive integer");
+    userNum = input.nextInt();
+    } while(userNum <= 0);
+    
+
+    for(int count = 1; count <= userNum; count++){
+      System.out.print(count);
+    }
     
   }
 }
